@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>movie</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>movieWrite</servlet-name>
+  	<servlet-class>com.globalin.controller.MovieWrite</servlet-class>
+  	<multipart-config>
+  		<max-file-size>-1</max-file-size>
+  		<max-request-size>-1</max-request-size>
+  		<file-size-threshold>1024</file-size-threshold>
+  	</multipart-config>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>movieWrite</servlet-name>
+  	<url-pattern>/moviewrite.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>movieUpdate</servlet-name>
+  	<servlet-class>com.globalin.controller.MovieUpdate</servlet-class>
+  	<multipart-config>
+  		<max-file-size>-1</max-file-size>
+  		<max-request-size>-1</max-request-size>
+  		<file-size-threshold>1024</file-size-threshold>
+  	</multipart-config>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>movieUpdate</servlet-name>
+  	<url-pattern>/movieupdate.do</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
